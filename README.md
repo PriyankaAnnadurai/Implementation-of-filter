@@ -26,11 +26,11 @@ Apply the Laplacian operator to the RGB image (image2) using OpenCV's cv2.Laplac
 ### 1. Smoothing Filters
 
 i) Using Averaging Filter
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 kernel = np.ones((11,11), np. float32)/121
@@ -48,11 +48,11 @@ plt.title('Filtered')
 plt.axis('off')
 ```
 ii) Using Weighted Averaging Filter
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 kernel2 = np.array([[1,2,1],[2,4,2],[1,2,1]])/16
@@ -62,11 +62,11 @@ plt.title('Weighted Averaging Filtered')
 
 ```
 iii) Using Gaussian Filter
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 gaussian_blur = cv2.GaussianBlur(src=image2, ksize=(11,11), sigmaX=0, sigmaY=0)
@@ -75,11 +75,11 @@ plt.title(' Gaussian Blurring Filtered')
 ```
 
 iv) Using Median Filter
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 median=cv2.medianBlur (src=image2, ksize=11)
@@ -90,11 +90,11 @@ plt.title(' Median Blurring Filtered')
 
 ### 2. Sharpening Filters
 i) Using Laplacian Kernal
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 kernel3 = np.array([[0,1,0], [1, -4,1],[0,1,0]])
@@ -103,11 +103,11 @@ plt.imshow(image5)
 plt.title('Laplacian Kernel')
 ```
 ii) Using Laplacian Operator
-```
+```py
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('hachiko.jpg')
+image1 = cv2.imread('cat.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
 new_image = cv2.Laplacian (image2, cv2.CV_64F)
@@ -119,23 +119,29 @@ plt.title('Laplacian Operator')
 ### 1. Smoothing Filters
 i) Using Averaging Filter
 
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/431b72c4-ec90-4066-852b-acd80e9a8abc)
 
 
 ii) Using Weighted Averaging Filter
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/2056b212-c5c5-46f9-ba51-730d630504b8)
 
 
 iii) Using Gaussian Filter
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/7d4d447f-ca49-4c7c-9c30-e22d9ead1214)
 
 
 
 iv) Using Median Filter
 
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/92bb5f15-02ae-4da2-8636-57348361116c)
 
 ### 2. Sharpening Filters
 i) Using Laplacian Kernal
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/4e42228e-6e4f-4f4c-ab8c-5f95586cef3d)
 
 
 ii) Using Laplacian Operator
+![image](https://github.com/PriyankaAnnadurai/Implementation-of-filter/assets/118351569/a3c227e2-a760-4567-8247-a5792b92f1c6)
 
 
 ## Result:
